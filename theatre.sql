@@ -1,3 +1,5 @@
+-- https://replit.com/@GregGaughan/theater?v=1
+
 with 
     recursive prices(price) as (select 1.0 union select price + 0.01 from prices where price<=8),  -- range 1..8 in increments of 0.01
     vars(base_cost, per_attendee, base_attendance, base_price, attendance_per_dollar) as (select * from (values 
